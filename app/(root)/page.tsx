@@ -8,13 +8,13 @@ export default async function Home({searchParams} : {searchParams : Promise<{que
 
   const posts = [{
     _createdAt : new Date(),
-    views : 53,
-    author : {_id : 1, name : "Ayman Sedqi"},
+    views : 153,
+    author : {_id : 1, name : "Ayman"},
     _id : 1,
-    description : "This is a description",
+    description : "How is AI will help us to be the best developers",
     image : "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    category : "Labtop",
-    title : "New Device"
+    category : "Developers",
+    title : "AI + Developpement"
 
   }]
   
@@ -28,7 +28,7 @@ export default async function Home({searchParams} : {searchParams : Promise<{que
       </section>
 
       <section className="section_container">
-        <p className="text-30-semibold">
+        <div className="text-30-semibold">
           {query ? `Search results for "${query}"` : 'All Startups'}
 
           <ul className="mt-7 card_grid">
@@ -38,7 +38,7 @@ export default async function Home({searchParams} : {searchParams : Promise<{que
               ))
             ) : (<p className="no-reesults">No Startups found!</p>)}
           </ul>
-        </p>
+        </div>
       </section>
     </>
   );
